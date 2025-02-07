@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    background: white;
+}
+
+.img_1 {
+    height: 35%;
+    width: 50%;
+}
+
+/* Carousel */
+.carousel-item .d-block1 {
+    height: 73%;
+}
+
+/* Buttons in the carousel */
+.btn1, .btn2 {
+    padding: 7px 45px;
+    color: white;
+    background-color: red;
+    border: none;
+}
+
+.btn2 {
+    margin: 100px -5px 120px 500px;
+}
+
+.btn1 {
+    margin: 40px 20px 180px 20px;
+}
+
+/* Image containers and overlay */
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(169, 169, 169, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    z-index: 2;
+}
+
+.learn-more {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.learn-more:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Image styling */
+.img3, .im2 {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Section2: Learn More Button */
+.section2 {
+    position: relative;
+}
+
+.learn-more-btn {
+    position: absolute;
+    top: 230px;
+    left: 164px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.learn-more-btn:hover {
+    background-color: rgba(141, 69, 69, 0.7);
+}
+
+/* Buttons Section */
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.lorem1, .lorem2 {
+    padding: 6px 19px;
+    background-color: white;
+    margin: 0 15px;
+}
+
+.lorem1:hover, .lorem2:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Cards Styling */
+.card {
+    width: 100%;
+    max-width: 18rem;
+    margin: 20px;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+/* Specific height for images */
+.img3 {
+    height: 70%;
+}
+
+.im2 {
+    height: 60%;
+}
+
+/* Media Queries */
+
+/* Large Screens */
+@media (min-width: 992px) {
+    .navbar-brand img {
+        width: 50%;
+    }
+
+    .carousel-caption .btn1,
+    .carousel-caption .btn2 {
+        padding: 10px 50px;
+    }
+
+    /* Adjust image container size */
+    .img3 {
+        height: 70%;
+    }
+
+    .im2 {
+        height: 60%;
+    }
+
+    .section2 .learn-more-btn {
+        top: 230px;
+        left: 164px;
+    }
+
+    /* Adjust column sizes for large screens */
+    .col-12.col-lg-8 {
+        flex: 0 0 66.66%;
+    }
+
+    .col-12.col-lg-4 {
+        flex: 0 0 33.33%;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand img {
+        width: 40%;
+    }
+
+    .carousel-caption .btn1,
+    .carousel-caption .btn2 {
+        padding: 8px 40px;
+    }
+
+    /* Adjust image container size */
+    .img3 {
+        height: 65%;
+    }
+
+    .im2 {
+        height: 55%;
+    }
+
+    .section2 .learn-more-btn {
+        top: 200px;
+        left: 130px;
+    }
+
+    /* Adjust column sizes for tablets */
+    .col-12.col-lg-8,
+    .col-12.col-lg-4 {
+        flex: 0 0 50%;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 767px) {
+    .navbar-brand img {
+        width: 60%;
+    }
+
+    .carousel-caption .btn1,
+    .carousel-caption .btn2 {
+        padding: 6px 30px;
+        font-size: 14px;
+    }
+
+    /* Adjust image container size */
+    .img3 {
+        height: 60%;
+    }
+
+    .im2 {
+        height: 50%;
+    }
+
+    .section2 .learn-more-btn {
+        top: 180px;
+        left: 100px;
+    }
+
+    /* Stack columns for small screens */
+    .col-12.col-lg-8,
+    .col-12.col-lg-4 {
+        flex: 0 0 100%;
+    }
+
+    /* Button styling for smaller screens */
+    .button {
+        flex-direction: column;
+    }
+
+    .lorem1, .lorem2 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Footer Styling */
+/* Footer Styling */
+.footer {
+    background-color: lightgrey;
+    color: black;
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  .footer .footer-link {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .footer .footer-link:hover {
+    color: #ff5a00;
+  }
+  
+  .search-bar {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .footer-line {
+    border-top: 1px solid #666;
+    margin: 20px 0;
+  }
+  
+  .footer .footer-links {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .footer .footer-links {
+      font-size: 14px;
+    }
+  
+    .footer .search-bar {
+      max-width: 200px;
+    }
+  
+    /* Layout adjustments for smaller screens */
+    .footer .row {
+      flex-direction: column; /* Stack the content vertically */
+      align-items: center; /* Center content */
+    }
+  
+    /* Reduce padding and make links smaller */
+    .footer .col-6 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    /* Make the footer links stack on smaller screens */
+    .footer .footer-links {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  
+    /* Footer links row layout for very small screens */
+    .footer .footer-links, .footer .search-bar {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 300px) {
+    /* Further adjustments for extremely small screens (e.g., 300px) */
+    .footer .footer-link {
+      font-size: 14px;
+    }
+  
+    .footer .search-bar {
+      max-width: 150px;
+      margin: 10px 0;
+    }
+  
+    /* Stack footer links vertically */
+    .footer .footer-links {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+  }
+  
